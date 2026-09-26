@@ -356,11 +356,18 @@ function OrderDetails({ order }: { order: TrackedOrder }) {
         </li>
       </ul>
 
-      <Button asChild variant="outline" size="sm" className="mt-6 rounded-full">
-        <Link to="/contact" search={{ topic: "Problem with my order", order: order.orderNumber }}>
-          <MessageSquareWarning /> Report a problem with this order
-        </Link>
-      </Button>
+      <div className="mt-6 flex flex-wrap items-center gap-3">
+        <Button asChild variant="outline" size="sm" className="rounded-full">
+          <Link to="/contact" search={{ topic: "Problem with my order", order: order.orderNumber }}>
+            <MessageSquareWarning /> Report a problem with this order
+          </Link>
+        </Button>
+        <Button asChild variant="outline" size="sm" className="rounded-full">
+          <a href={site.voiceAgentPhoneHref}>
+            <Headset /> Call 24/7 voice agent: {site.voiceAgentPhone}
+          </a>
+        </Button>
+      </div>
     </article>
   );
 }
