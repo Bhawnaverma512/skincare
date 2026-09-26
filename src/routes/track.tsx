@@ -3,6 +3,7 @@ import {
   AlertCircle,
   CheckCircle2,
   ClipboardCheck,
+  Headset,
   Loader2,
   MessageSquareWarning,
   Package,
@@ -141,6 +142,18 @@ function TrackPage() {
               {error}
             </p>
           )}
+          <p className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
+            <Headset className="size-4 shrink-0 text-primary" />
+            <span>
+              Prefer to call? Our 24/7 voice agent can check your order status:{" "}
+              <a
+                href={site.voiceAgentPhoneHref}
+                className="font-medium text-primary hover:underline"
+              >
+                {site.voiceAgentPhone}
+              </a>
+            </span>
+          </p>
         </form>
 
         {result && <OrderDetails order={result} />}
@@ -252,7 +265,8 @@ function OrderDetails({ order }: { order: TrackedOrder }) {
           <p>
             This order was cancelled
             {order.cancelledAt && ` on ${fullDateFormatter.format(new Date(order.cancelledAt))}`}.
-            Questions? Call us on {site.phone}.
+            Questions? Call us on {site.phone} or our 24/7 voice agent on{" "}
+            {site.voiceAgentPhone}.
           </p>
         </div>
       ) : (

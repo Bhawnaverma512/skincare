@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, Phone } from "lucide-react";
+import { Headset, Mail, Phone } from "lucide-react";
 
 import { categories } from "@/lib/products";
 import { site } from "@/lib/site";
@@ -23,6 +23,13 @@ export function Footer() {
             <a href={site.phoneHref} className="flex items-center gap-2 hover:text-primary">
               <Phone className="size-4 text-primary" />
               {site.phone}
+            </a>
+            <a
+              href={site.voiceAgentPhoneHref}
+              className="flex items-center gap-2 hover:text-primary"
+            >
+              <Headset className="size-4 text-primary" />
+              {site.voiceAgentPhone}
             </a>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { CheckCircle2, Clock, Loader2, Mail, Phone } from "lucide-react";
+import { CheckCircle2, Clock, Headset, Loader2, Mail, Phone } from "lucide-react";
 import { useEffect, useState, type FormEvent } from "react";
 import { toast } from "sonner";
 
@@ -264,6 +264,11 @@ function ContactPage() {
           <InfoCard icon={Phone} title="Call us">
             <a href={site.phoneHref} className="hover:text-primary">
               {site.phone}
+            </a>
+          </InfoCard>
+          <InfoCard icon={Headset} title="Voice agent (24/7)">
+            <a href={site.voiceAgentPhoneHref} className="hover:text-primary">
+              {site.voiceAgentPhone}
             </a>
           </InfoCard>
           <InfoCard icon={Clock} title="Support hours">

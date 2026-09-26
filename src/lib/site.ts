@@ -8,6 +8,9 @@ export const site = {
   email: "bhawnabhavu63@gmail.com",
   phone: "+91 90564 35237",
   phoneHref: "tel:+919056435237",
+  // Automated voice agent — answers 24/7, separate line from the India number above.
+  voiceAgentPhone: "+1 (302) 754 2049",
+  voiceAgentPhoneHref: "tel:+13027542049",
   hours: "Mon–Fri, 9am–6pm",
 };
 
